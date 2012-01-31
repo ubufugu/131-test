@@ -1,0 +1,5 @@
+Welcome to our log file!
+This is revision 1.0.0, meaning the very first iteration of this project.
+We hope to implement more features soon!
+
+-JT

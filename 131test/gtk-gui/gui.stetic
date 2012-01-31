@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+    <target-gtk-version>2.12</target-gtk-version>
+  </configuration>
+  <import>
+    <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="../bin/Debug/131test.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="1142 609">
+    <action-group name="Default">
+      <action id="ClearAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Clear</property>
+        <property name="ShortLabel" translatable="yes">Clear</property>
+      </action>
+      <action id="UpperCaseAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Upper Case</property>
+        <property name="ShortLabel" translatable="yes">Upper Case</property>
+      </action>
+      <action id="LowerCaseAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Lower Case</property>
+        <property name="ShortLabel" translatable="yes">Lower Case</property>
+      </action>
+      <action id="SaveAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Save</property>
+        <property name="ShortLabel" translatable="yes">Save</property>
+      </action>
+      <action id="ClearallAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Clearall</property>
+        <property name="ShortLabel" translatable="yes">Clearall</property>
+        <signal name="Activated" handler="OnClearallActionActivated" />
+      </action>
+      <action id="FileAction">
+        <property name="Type">Action</property>
+        <property name="Accelerator">&lt;Alt&gt;f</property>
+        <property name="Label" translatable="yes">File</property>
+        <property name="ShortLabel" translatable="yes">File</property>
+      </action>
+      <action id="_Open">
+        <property name="Type">Action</property>
+        <property name="Accelerator">&lt;Control&gt;o</property>
+        <property name="Label" translatable="yes">Open</property>
+        <property name="ShortLabel" translatable="yes">Open</property>
+        <signal name="Activated" handler="OnOpenActivated" />
+      </action>
+      <action id="C_lose">
+        <property name="Type">Action</property>
+        <property name="Accelerator">&lt;Control&gt;l</property>
+        <property name="Label" translatable="yes">Close</property>
+        <property name="ShortLabel" translatable="yes">Close</property>
+        <signal name="Activated" handler="OnCLoseActivated" />
+      </action>
+      <action id="E_xit">
+        <property name="Type">Action</property>
+        <property name="Accelerator">&lt;Control&gt;x</property>
+        <property name="Label" translatable="yes">Exit</property>
+        <property name="ShortLabel" translatable="yes">Exit</property>
+        <signal name="Activated" handler="OnEXitActivated" />
+      </action>
+      <action id="HelpAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">_Help</property>
+        <property name="ShortLabel" translatable="yes">_Help</property>
+      </action>
+      <action id="_Help">
+        <property name="Type">Action</property>
+        <property name="Accelerator">&lt;Control&gt;h</property>
+        <property name="Label" translatable="yes">About....</property>
+        <property name="ShortLabel" translatable="yes">About....</property>
+        <signal name="Activated" handler="OnHelpActivated" />
+      </action>
+    </action-group>
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.VBox" id="vbox1">
+        <property name="MemberName" />
+        <property name="Spacing">6</property>
+        <child>
+          <widget class="Gtk.MenuBar" id="menubar2">
+            <property name="MemberName" />
+            <node name="__gtksharp_122_Stetic_Editor_ActionMenuBar" type="Menubar">
+              <node type="Menu" action="FileAction">
+                <node type="Menuitem" action="_Open" />
+                <node type="Menuitem" action="C_lose" />
+                <node type="Menuitem" action="E_xit" />
+              </node>
+              <node type="Menu" action="HelpAction">
+                <node type="Menuitem" action="_Help" />
+              </node>
+            </node>
+          </widget>
+          <packing>
+            <property name="Position">0</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.HBox" id="hbox1">
+            <property name="MemberName" />
+            <property name="Spacing">6</property>
+            <child>
+              <widget class="Gtk.Button" id="ButtonClear">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="Type">TextOnly</property>
+                <property name="Label" translatable="yes">Clear</property>
+                <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnButtonClearClicked" />
+              </widget>
+              <packing>
+                <property name="Position">0</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Button" id="buttonUpper">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="Type">TextOnly</property>
+                <property name="Label" translatable="yes">Upper Case</property>
+                <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnButtonUpperClicked" />
+              </widget>
+              <packing>
+                <property name="Position">1</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Button" id="buttonLower">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="Type">TextOnly</property>
+                <property name="Label" translatable="yes">Lower Case</property>
+                <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnButtonLowerClicked" />
+              </widget>
+              <packing>
+                <property name="Position">2</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Button" id="button4">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="Type">TextOnly</property>
+                <property name="Label" translatable="yes">Save</property>
+                <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnButton4Clicked" />
+              </widget>
+              <packing>
+                <property name="Position">3</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.TextView" id="textview1">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Text" translatable="yes" />
+          </widget>
+          <packing>
+            <property name="Position">2</property>
+            <property name="AutoSize">True</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.ScrolledWindow" id="scrolledwindow1">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="ShadowType">In</property>
+            <child>
+              <widget class="Gtk.TextView" id="logTextView">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="Editable">False</property>
+                <property name="CursorVisible">False</property>
+                <property name="Text" translatable="yes" />
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">3</property>
+            <property name="AutoSize">True</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>
